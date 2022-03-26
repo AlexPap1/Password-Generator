@@ -83,21 +83,27 @@ function generatePassword() {
     values = values.concat(specialOptions);
   };
 
-  for (var i = 0; i < criteria; i++)
+  var password = ""; 
 
+  for (var i = 0; i < criteria; i++) {
+    password  += test();
+  }
 
+  //specify symbols
   //return value of string
   //return values;
   return password;
   //include test function
 };
 
+//moved this randomized function into the generate passoword function
 function test() {
   var valueToUse = values[Math.floor(Math.random() * values.length)];
   // do something with the selected value
-  alert(valueToUse);
+  //alert(valueToUse);
   return valueToUse;
-}
+
+} 
 
 
 // Write password to the #password input
